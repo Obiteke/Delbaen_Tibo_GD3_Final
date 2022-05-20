@@ -26,7 +26,7 @@ public class CharacterControllerScript : MonoBehaviour
     private Animator _animator;
     public GameObject _cam;
 
-    public float Speed;
+    public float topSpeed;
     public float RotatingSpeed= 1.0f;
 
     private float _gravity = -7f;
@@ -39,7 +39,10 @@ public class CharacterControllerScript : MonoBehaviour
     private float _initialJumpVelocity;
     public float _maxJumpHeight = 4f;
     public float _maxJumpTime = 0.75f;
-    public bool runnerActive;
+
+    private float timeZeroToMax = 0.5f;
+    private float acceleration;
+    private float CurrentSpeed= 0;
 
     public bool isRunnerCharacter;
     #endregion
@@ -52,13 +55,13 @@ public class CharacterControllerScript : MonoBehaviour
     #region Methods
     private void Awake()
     {
+        acceleration = topSpeed / timeZeroToMax;
+
         //_animator = gameObject.GetComponentInChildren<Animator>();
         _cc = gameObject.GetComponent<CharacterController>();
         setupJumpVariables();
 
         _rigidBody = GetComponent<Rigidbody>();
-
-
     }
 
     //private void SetCamera()
@@ -147,25 +150,36 @@ public class CharacterControllerScript : MonoBehaviour
 
     private void Movement()
     {
+        //CurrentSpeed += acceleration * Time.fixedDeltaTime;
+        //CurrentSpeed = Mathf.Min(CurrentSpeed, topSpeed);
         if (IsMoving)
         {
             if (_moveInput.x != 0 || _moveInput.y != 0)
             {
-                _moveDir = new Vector3(Speed * _moveInput.x, _moveDir.y, Speed * _moveInput.y);
+                CurrentSpeed += acceleration * Time.fixedDeltaTime;
+                CurrentSpeed = Mathf.Min(CurrentSpeed, topSpeed);
+
+                _moveDir = new Vector3(CurrentSpeed * _moveInput.x, _moveDir.y, CurrentSpeed * _moveInput.y);
                 if(isRunnerCharacter)
                     _animator.SetBool("IsRunning", true);
             }
         }
         else
         {
-                if(isRunnerCharacter)
+            if(CurrentSpeed >= 0)
+            {
+                CurrentSpeed -= acceleration * Time.fixedDeltaTime;
+                CurrentSpeed = Mathf.Max(CurrentSpeed, 0);
+            }
+
+            if (isRunnerCharacter)
                     _animator.SetBool("IsRunning", false);
             _moveDir = new Vector3(0, _moveDir.y, 0);
         }
     }
     private void Rotation()
     {
-        if (runnerActive)
+        if (isRunnerCharacter)
         {
             if (_moveInput.x != 0 || _moveInput.y != 0)
             {

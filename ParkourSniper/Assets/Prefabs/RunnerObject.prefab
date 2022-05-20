@@ -257,7 +257,7 @@ MonoBehaviour:
   _cc: {fileID: 549126877465795864}
   _animator: {fileID: 573204407127975429}
   _cam: {fileID: 549126876477635962}
-  Speed: 8
+  topSpeed: 8
   RotatingSpeed: 1
   _maxJumpHeight: 6
   _maxJumpTime: 0.75
