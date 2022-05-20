@@ -1,0 +1,90 @@
+{
+    "name": "Sniper",
+    "maps": [
+        {
+            "name": "Sniper",
+            "id": "c1c2c4af-d64a-49bb-bc2a-1c6d3a62c313",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "14f42424-8cdf-436d-9330-6c60460b3e1f",
+                    "expectedControlType": "Vector2",
+                    "processors": "StickDeadzone",
+                    "interactions": ""
+                },
+                {
+                    "name": "Aim",
+                    "type": "Value",
+                    "id": "382aafb2-17c8-4b7e-9414-57384ccf92d8",
+                    "expectedControlType": "Vector2",
+                    "processors": "StickDeadzone",
+                    "interactions": ""
+                },
+                {
+                    "name": "Scope",
+                    "type": "Button",
+                    "id": "038f9ae7-cc7b-451a-9cd5-35181b2636e3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "b8a5c67e-9e24-47fc-89df-787b00f0b3a1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "303d2ac5-8cc6-4f6a-aa6f-bb700d9a83ac",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22ad10b2-63fd-4797-bf84-24be63a45ba0",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c679a93d-ffdc-4e28-971b-d857690c3566",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Scope",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a17e13a7-5602-449e-afba-26fb2d0bdd0c",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -1,0 +1,71 @@
+{
+    "name": "Runner",
+    "maps": [
+        {
+            "name": "Runner",
+            "id": "aa097c8d-90c0-4e00-8c69-2ad20a27babe",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "a3d51cb9-f4fb-405c-bd73-4e7cb83fb411",
+                    "expectedControlType": "Vector2",
+                    "processors": "StickDeadzone",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "7a9a1a04-5868-49c4-bd3e-ab6ce7fa012d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "619c9588-f021-4931-b88b-ed59e9290228",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c8c8dbde-2ab2-4043-899d-500eecabfd5a",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1725417a-5dca-4445-9f63-bd1278ca726b",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a8565fd-1fc2-44e0-be17-2442da914115",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
