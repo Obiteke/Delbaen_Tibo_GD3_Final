@@ -32,7 +32,9 @@ public class CharacterControllerScript : MonoBehaviour
     private float _gravity = -7f;
     private float _groundedGravity = -0.05f;
 
-    public float KBForce = 1f;
+    private float _kBForce = 10f;
+    private float kBTime = 0.25f;
+    private float kBCounter;
 
     private float _initialJumpVelocity;
     public float _maxJumpHeight = 4f;
@@ -73,12 +75,16 @@ public class CharacterControllerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        Movement();
-        _cc.Move(_moveDir * Time.fixedDeltaTime); //transform.TransformDirection(
         HandleGravity();
-        HandleJump();
-        //SetCamera();
+        if (kBCounter <= 0)
+        {
+            Movement();
+            HandleJump();
+        }
+        else
+            kBCounter -= Time.fixedDeltaTime;
+        
+        _cc.Move(_moveDir * Time.fixedDeltaTime);
     }
 
     public void HandleGravity()
@@ -170,17 +176,10 @@ public class CharacterControllerScript : MonoBehaviour
     }
     public void Knockback(Vector3 enemyPosition)
     {
-        StartCoroutine(KBack(enemyPosition));
-    }
-    private IEnumerator KBack(Vector3 enemyPosition)
-    {
-        Vector3 dir = (enemyPosition - gameObject.transform.position).normalized;
-        _cc.enabled = false;
-        _rigidBody = gameObject.AddComponent<Rigidbody>();
-        _rigidBody.AddForce(Vector3.ClampMagnitude(dir * KBForce * Time.deltaTime, 10), ForceMode.Impulse);
-        yield return new WaitForSeconds(1);
-        Destroy(_rigidBody);
-        _cc.enabled = true;
+        Vector3 dir = -(enemyPosition - gameObject.transform.position).normalized;
+        _moveDir = dir * _kBForce;
+
+        kBCounter = kBTime;
     }
 
 
