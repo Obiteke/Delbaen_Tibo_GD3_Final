@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 2495622500
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: parkoursniper
+      Dependencies: {}
+    Info_1:
+      Name: parkoursniper_info
+      Dependencies: {}

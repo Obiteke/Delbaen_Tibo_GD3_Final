@@ -9,7 +9,7 @@ public class LaserRenderer : MonoBehaviour
     private LineRenderer _lR;
     private Camera _cam;
 
-    private List<LaserData> laserQueue;
+    private List<LaserData> laserList;
     private LaserData shot;
     public ResetScene resetScene;
     private float _laserRange = 300;
@@ -18,19 +18,19 @@ public class LaserRenderer : MonoBehaviour
     {
         _cam = FindObjectOfType<Camera>().GetComponent<Camera>();
         _lR = GetComponent<LineRenderer>();
-        laserQueue = FindObjectOfType<LaserListScript>().laserQueue;
+        laserList = FindObjectOfType<LaserListScript>().laserList;
         resetScene = FindObjectOfType<ResetScene>();
 
         MeshCollider collider = _lR.gameObject.AddComponent<MeshCollider>();
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            shot = laserQueue[0];
-            laserQueue.Remove(shot);
+            shot = laserList[0];
+            laserList.Remove(shot);
         }
         else
         {
-            shot = laserQueue[laserQueue.Count - 1];
+            shot = laserList[laserList.Count - 1];
         }
 
         RaycastHit hit;

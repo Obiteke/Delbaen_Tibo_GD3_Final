@@ -249,6 +249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sniper
       objectReference: {fileID: 0}
+    - target: {fileID: 7589165970871444517, guid: 8ba578ab41a108e4695e412352e1a60c, type: 3}
+      propertyPath: topSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7589165970871444520, guid: 8ba578ab41a108e4695e412352e1a60c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -384,7 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214926466}
   - component: {fileID: 214926467}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 521301700}
   - component: {fileID: 521301701}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,24 +702,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563831483}
   m_CullTransparentMesh: 1
---- !u!1 &940850174 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 469826799847916071, guid: 72160f192411f904b86b918e0a6a5cbb, type: 3}
-  m_PrefabInstance: {fileID: 1979127318}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &940850175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940850174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c7169e0c85d40e46a0ef825ec17e499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lls: {fileID: 0}
 --- !u!1 &1407527197
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1407527198}
   - component: {fileID: 1407527199}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +751,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 469826799847916064, guid: 72160f192411f904b86b918e0a6a5cbb, type: 3}
   m_PrefabInstance: {fileID: 1979127318}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940850174}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 228bd0864a046e747b70e28b1f9ed439, type: 3}
@@ -895,7 +881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1881965159}
   - component: {fileID: 1881965158}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

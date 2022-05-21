@@ -14,7 +14,7 @@ public class RunnerLaser : MonoBehaviour
 
     private void Start()
     {
-        laserQueue = FindObjectOfType<LaserListScript>().laserQueue;
+        laserQueue = FindObjectOfType<LaserListScript>().laserList;
     }
     // Update is called once per frame
     void Update()

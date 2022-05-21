@@ -7,28 +7,28 @@ using UnityEngine.SceneManagement;
 public class LaserListScript : MonoBehaviour
 {
     [SerializeField]
-    public List<LaserData> laserQueue = new List<LaserData>();
+    public List<LaserData> laserList = new List<LaserData>();
 
     [SerializeField]
-    public List<LaserData> laserQueueSave = new List<LaserData>();
+    public List<LaserData> laserListSave = new List<LaserData>();
 
 
 
     public void LaserListQueue(Vector3 Dir, Vector3 Origin, float Time)
     {
-        laserQueue.Add(new LaserData(Dir, Origin, Time));
+        laserList.Add(new LaserData(Dir, Origin, Time));
         LaserListSaveQueue(Dir, Origin, Time);
     }
     public void LaserListSaveQueue(Vector3 Dir, Vector3 Origin, float Time)
     {
-        laserQueueSave.Add(new LaserData(Dir, Origin, Time));
+        laserListSave.Add(new LaserData(Dir, Origin, Time));
     }
     public void QueueReset()
     {
-        laserQueue.Clear();
-        foreach(var data in laserQueueSave)
+        laserList.Clear();
+        foreach(var data in laserListSave)
         {
-            laserQueue.Add(data);
+            laserList.Add(data);
         }
     }
 }
