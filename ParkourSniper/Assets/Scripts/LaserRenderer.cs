@@ -18,19 +18,19 @@ public class LaserRenderer : MonoBehaviour
     {
         _cam = FindObjectOfType<Camera>().GetComponent<Camera>();
         _lR = GetComponent<LineRenderer>();
-        laserList = FindObjectOfType<LaserListScript>().laserList;
+        LaserListScript lls = FindObjectOfType<LaserListScript>();
         resetScene = FindObjectOfType<ResetScene>();
 
         MeshCollider collider = _lR.gameObject.AddComponent<MeshCollider>();
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            shot = laserList[0];
-            laserList.Remove(shot);
+            shot = lls.laserList[0];
+            lls.laserList.Remove(shot);
         }
         else
         {
-            shot = laserList[laserList.Count - 1];
+            shot = lls.laserList[lls.laserList.Count - 1];
         }
 
         RaycastHit hit;
@@ -47,31 +47,18 @@ public class LaserRenderer : MonoBehaviour
         _lR.SetPosition(0, shot.Position - cameraOffset);
         _lR.SetPosition(1, shot.Position + (shot.Direction * _laserRange));
 
-        
-        Mesh mesh = new Mesh();
-        _lR.BakeMesh(mesh, _cam,true);
-
-        collider.sharedMesh = mesh;
-        collider.convex = true;
-        collider.isTrigger = true;
     }
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.gameObject.layer == 7)
+        RaycastHit hitMovedThrough;
+
+        if (Physics.Linecast(shot.Position, shot.Position + (shot.Direction * _laserRange), out hitMovedThrough))
         {
-            Debug.Log("hitBaby");
-            resetScene.RestartScene();
+            if (hitMovedThrough.collider.gameObject.layer == 7)
+            {
+                Debug.Log("hitBaby");
+                resetScene.RestartScene();
+            }
         }
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("hh");
-    //    if (other.gameObject.layer == 7)
-    //    {
-    //        Debug.Log("hitBaby");
-    //        sceneReset.ResetScene();
-    //    }
-    //}
-
-    
 }

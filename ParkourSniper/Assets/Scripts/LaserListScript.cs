@@ -12,7 +12,7 @@ public class LaserListScript : MonoBehaviour
     [SerializeField]
     public List<LaserData> laserListSave = new List<LaserData>();
 
-
+    
 
     public void LaserListQueue(Vector3 Dir, Vector3 Origin, float Time)
     {

@@ -142,3 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cb82df9392b4d43a1b17e312d1fb9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetScene: {fileID: 0}

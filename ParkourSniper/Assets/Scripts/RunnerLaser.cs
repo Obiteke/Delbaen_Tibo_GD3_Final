@@ -6,7 +6,7 @@ using UnityEngine;
 public class RunnerLaser : MonoBehaviour
 {
     private float currentTime;
-    private List<LaserData> laserQueue;
+    private List<LaserData> laserList;
     private bool hasShotFired = true;
     private LaserData shot;
 
@@ -14,19 +14,19 @@ public class RunnerLaser : MonoBehaviour
 
     private void Start()
     {
-        laserQueue = FindObjectOfType<LaserListScript>().laserList;
+        laserList = FindObjectOfType<LaserListScript>().laserList;
     }
     // Update is called once per frame
     void Update()
     {
         currentTime += Time.deltaTime;
-        if (laserQueue.Count != 0)
+        if (laserList.Count != 0)
         {
             if (hasShotFired)
             {
-                shot = laserQueue[0];
+                shot = laserList[0];
                 hasShotFired = false;
-
+        
             }
             if (currentTime >= shot.Time)
             {
