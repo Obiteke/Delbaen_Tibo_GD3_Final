@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1735342737487665364}
   - component: {fileID: 1735342737487665365}
   - component: {fileID: 1735342737487665367}
+  - component: {fileID: 5924950530331050865}
   m_Layer: 11
   m_Name: EndDoor
   m_TagString: Untagged
@@ -65,6 +66,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb0fd1391fe93447b672b6caf927860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5924950530331050865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735342737487665362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.77, y: 4.76, z: 3.67}
+  m_Center: {x: 0.63, y: 2.69, z: 2.12}
 --- !u!1 &1735342738005474169
 GameObject:
   m_ObjectHideFlags: 0

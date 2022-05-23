@@ -9,9 +9,8 @@ public class LaserRenderer : MonoBehaviour
     private LineRenderer _lR;
     private Camera _cam;
 
-    private List<LaserData> laserList;
     private LaserData shot;
-    public ResetScene resetScene;
+    private SceneManagerScript sMS;
     private float _laserRange = 300;
 
     void Start()
@@ -19,7 +18,7 @@ public class LaserRenderer : MonoBehaviour
         _cam = FindObjectOfType<Camera>().GetComponent<Camera>();
         _lR = GetComponent<LineRenderer>();
         LaserListScript lls = FindObjectOfType<LaserListScript>();
-        resetScene = FindObjectOfType<ResetScene>();
+        sMS = FindObjectOfType<SceneManagerScript>();
 
         //MeshCollider collider = _lR.gameObject.AddComponent<MeshCollider>();
 
@@ -61,7 +60,7 @@ public class LaserRenderer : MonoBehaviour
             if (hitMovedThrough.collider.gameObject.layer == 7)
             {
                 Debug.Log("hitBaby");
-                resetScene.RestartScene();
+                sMS.RestartScene();
             }
         }
     }

@@ -22,9 +22,11 @@ public class SniperScript : MonoBehaviour
     private float currentTime;
     private int shotCount = 0 ;
 
-    //private int percision = 40;
+    private bool _firstShotTaken;
+
 
     private LaserListScript LLS;
+    private SceneManagerScript sMS;
     // Start is called before the first frame update
 
 
@@ -34,10 +36,13 @@ public class SniperScript : MonoBehaviour
     {
         _cam = FindObjectOfType<Camera>();
         LLS = FindObjectOfType<LaserListScript>();
+        sMS = FindObjectOfType<SceneManagerScript>();
     }
     private void FixedUpdate()
     {
-        currentTime += Time.fixedDeltaTime;
+        if (_firstShotTaken)
+            currentTime += Time.fixedDeltaTime;
+
         Rotation();
     }
     public void RotationInput(InputAction.CallbackContext context)
@@ -67,13 +72,17 @@ public class SniperScript : MonoBehaviour
     }
     public void ShootInput(InputAction.CallbackContext context)
     {
+        if (!_firstShotTaken)
+            sMS.LvlSpace();
+
+        _firstShotTaken = true;
         if (context.started)
         {
             shotCount++;
             Vector3 rayOrigin = _cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
             //RaycastHit hit;
 
-            LLS.LaserListQueue(_cam.transform.forward, rayOrigin, shotCount * 2);
+            LLS.LaserListQueue(_cam.transform.forward, rayOrigin, currentTime + 2);
 
             Instantiate(laser);
         }

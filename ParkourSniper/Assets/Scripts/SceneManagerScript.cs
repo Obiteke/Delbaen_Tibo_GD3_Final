@@ -18,11 +18,11 @@ public class SceneManagerScript : MonoBehaviour
     void Start()
     {
         animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();
-        LvlSpace();
+        //LvlSpace();
         lls = FindObjectOfType<LaserListScript>();
         LaserListScript.DontDestroyOnLoad(lls);
     }
-    private void LvlSpace()
+    public void LvlSpace()
     {
         if (isLongLvl)
         {
@@ -39,6 +39,7 @@ public class SceneManagerScript : MonoBehaviour
     //}
     private void OnLevelWasLoaded(int level)
     {
+        Debug.Log(level);
         animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();
         LvlSpace();
     }
@@ -55,5 +56,10 @@ public class SceneManagerScript : MonoBehaviour
 
         //return null;
     }
-    
+    public void RestartScene()
+    {
+        lls.QueueReset();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }
