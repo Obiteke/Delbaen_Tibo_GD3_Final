@@ -33,19 +33,24 @@ public class SceneManagerScript : MonoBehaviour
             animatorDoorEnd.SetBool("MediumLVL", true);
         }
     }
-
-    public void CheckCount()
+    //private void Update()
+    //{
+    //    if(animatorDoorEnd.ge)
+    //}
+    private void OnLevelWasLoaded(int level)
     {
-        if (Enemys.Count == 0)
-        {
-            StartCoroutine(NextScene());
-        }
+        animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();
+        LvlSpace();
+    }
+    public void StartNextScene()
+    {
+        StartCoroutine(NextScene());
     }
 
     private IEnumerator NextScene()
     {
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(nextSceneName);
 
         //return null;

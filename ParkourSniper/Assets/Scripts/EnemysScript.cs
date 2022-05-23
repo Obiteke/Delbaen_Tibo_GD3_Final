@@ -19,7 +19,10 @@ public class EnemysScript : MonoBehaviour
         if(sMS != null && gameObject != null)
         {
             sMS.Enemys.Remove(this.gameObject);
-            sMS.CheckCount();
+            //if (sMS.Enemys.Count == 0)
+            //{
+            //    sMS.StartNextScene();
+            //}
         }
     }
     public void Explosion()

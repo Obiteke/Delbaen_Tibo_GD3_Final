@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformOffOnScript : MonoBehaviour
+public class OnOffScript : MonoBehaviour
 {
     public Material offMaterial;
     public Material onMaterial;
@@ -14,5 +14,13 @@ public class PlatformOffOnScript : MonoBehaviour
     public void OnMaterial()
     {
         gameObject.GetComponent<MeshRenderer>().material = onMaterial;
+        if (GetComponent<Collider>().isTrigger == true)
+            GetComponent<Collider>().isTrigger = false;
+        else
+        {
+            GetComponent<Collider>().isTrigger = true;
+            gameObject.layer = 2;
+        }
+
     }
 }

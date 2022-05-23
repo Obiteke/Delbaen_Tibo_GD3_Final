@@ -44,7 +44,7 @@ public class LaserRenderer : MonoBehaviour
             }
             if (hit.collider.gameObject.layer == 10)
             {
-                hit.collider.gameObject.GetComponent<PlatformOffOnScript>().OnMaterial();
+                hit.collider.gameObject.GetComponent<OnOffScript>().OnMaterial();
             }
         }
         Vector3 cameraOffset = new Vector3(0f, 0.1f, 0f);
