@@ -10,7 +10,6 @@ public class ResetScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         lls = FindObjectOfType<LaserListScript>();
     }
     public void RestartScene()
@@ -18,4 +17,5 @@ public class ResetScene : MonoBehaviour
         lls.QueueReset();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    
 }

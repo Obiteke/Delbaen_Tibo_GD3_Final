@@ -21,7 +21,7 @@ public class LaserRenderer : MonoBehaviour
         LaserListScript lls = FindObjectOfType<LaserListScript>();
         resetScene = FindObjectOfType<ResetScene>();
 
-        MeshCollider collider = _lR.gameObject.AddComponent<MeshCollider>();
+        //MeshCollider collider = _lR.gameObject.AddComponent<MeshCollider>();
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
@@ -41,6 +41,10 @@ public class LaserRenderer : MonoBehaviour
                 GameObject hitbody = hit.rigidbody.gameObject;
                 hitbody.GetComponent<EnemysScript>().Explosion();
                 Destroy(hitbody);
+            }
+            if (hit.collider.gameObject.layer == 10)
+            {
+                hit.collider.gameObject.GetComponent<PlatformOffOnScript>().OnMaterial();
             }
         }
         Vector3 cameraOffset = new Vector3(0f, 0.1f, 0f);

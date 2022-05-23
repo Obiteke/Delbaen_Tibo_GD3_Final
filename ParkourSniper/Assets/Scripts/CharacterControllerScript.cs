@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class CharacterControllerScript : MonoBehaviour
 {
     #region Fields
-    public Vector3 _moveDir = Vector3.zero;
+    private Vector3 _moveDir = Vector3.zero;
     private Vector2 _moveInput;
     private bool _isMoving = false;
     private bool _isJumping = false;

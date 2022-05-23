@@ -73,7 +73,7 @@ public class SniperScript : MonoBehaviour
             Vector3 rayOrigin = _cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
             //RaycastHit hit;
 
-            LLS.LaserListQueue(_cam.transform.forward, rayOrigin, shotCount * 3);
+            LLS.LaserListQueue(_cam.transform.forward, rayOrigin, shotCount * 2);
 
             Instantiate(laser);
         }

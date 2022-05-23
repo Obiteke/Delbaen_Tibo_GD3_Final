@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1315894222356099218}
   - component: {fileID: 1315894222356099221}
+  - component: {fileID: 6237279161687603109}
+  - component: {fileID: 9171100257340609785}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -45,3 +47,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemys: []
   lls: {fileID: 0}
+  isLongLvl: 0
+  animatorDoorEnd: {fileID: 0}
+  nextSceneName: 
+--- !u!114 &6237279161687603109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315894222356099220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7169e0c85d40e46a0ef825ec17e499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lls: {fileID: 9171100257340609785}
+--- !u!114 &9171100257340609785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315894222356099220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228bd0864a046e747b70e28b1f9ed439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 549126876477635967}
   - component: {fileID: 549126876477635964}
   - component: {fileID: 549126876477635965}
-  - component: {fileID: 549126876477635966}
+  - component: {fileID: 5415454585397263015}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -84,7 +84,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549126876477635962}
   m_Enabled: 1
---- !u!114 &549126876477635966
+--- !u!114 &5415454585397263015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,11 +93,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 549126876477635962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87a90db6e95d0640941e809b7fe66cd, type: 3}
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Runner: {fileID: 549126877465795867}
-  offset: {x: 0, y: 5, z: -6}
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &549126877465613277
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9ea557df14e3f4e8af6ca180d7b9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveDir: {x: 0, y: 0, z: 0}
   _cc: {fileID: 549126877465795864}
   _animator: {fileID: 573204407127975429}
   _cam: {fileID: 549126876477635962}
@@ -261,7 +278,6 @@ MonoBehaviour:
   RotatingSpeed: 1
   _maxJumpHeight: 6
   _maxJumpTime: 0.75
-  runnerActive: 1
   isRunnerCharacter: 1
 --- !u!114 &549126877465795866
 MonoBehaviour:
