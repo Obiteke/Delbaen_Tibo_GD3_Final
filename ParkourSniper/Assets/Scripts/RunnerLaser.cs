@@ -9,12 +9,16 @@ public class RunnerLaser : MonoBehaviour
     private List<LaserData> laserList;
     private bool hasShotFired = true;
     private LaserData shot;
+    private SceneManagerScript sMS;
 
     public GameObject laser;
 
     private void Start()
     {
         laserList = FindObjectOfType<LaserListScript>().laserList;
+
+        sMS = FindObjectOfType<SceneManagerScript>();
+        sMS.LvlSpace();
     }
     // Update is called once per frame
     void Update()

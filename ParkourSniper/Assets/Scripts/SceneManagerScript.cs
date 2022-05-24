@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    public List<GameObject> Enemys = new List<GameObject>();
+    //public List<GameObject> Enemys = new List<GameObject>();
     public LaserListScript lls;
+
 
     public bool isLongLvl;
 
@@ -39,9 +40,7 @@ public class SceneManagerScript : MonoBehaviour
     //}
     private void OnLevelWasLoaded(int level)
     {
-        Debug.Log(level);
         animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();
-        LvlSpace();
     }
     public void StartNextScene()
     {
