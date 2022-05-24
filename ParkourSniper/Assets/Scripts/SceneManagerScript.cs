@@ -10,6 +10,7 @@ public class SceneManagerScript : MonoBehaviour
 
 
     public bool isLongLvl;
+    public bool isSniperLevel;
 
     public Animator animatorDoorEnd;
 
@@ -19,7 +20,6 @@ public class SceneManagerScript : MonoBehaviour
     void Start()
     {
         animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();
-        //LvlSpace();
         lls = FindObjectOfType<LaserListScript>();
         LaserListScript.DontDestroyOnLoad(lls);
     }
@@ -34,10 +34,7 @@ public class SceneManagerScript : MonoBehaviour
             animatorDoorEnd.SetBool("MediumLVL", true);
         }
     }
-    //private void Update()
-    //{
-    //    if(animatorDoorEnd.ge)
-    //}
+
     private void OnLevelWasLoaded(int level)
     {
         animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();

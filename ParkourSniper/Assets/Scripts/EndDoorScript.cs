@@ -7,12 +7,13 @@ public class EndDoorScript : MonoBehaviour
     private Animator _animator;
     private SceneManagerScript sMS;
 
-    public bool isSniperLVL = true;
+    public bool isSniperLVL;
     //private bool _characterFinished = false;
 
     private void Start()
     {
         sMS = FindObjectOfType<SceneManagerScript>();
+        sMS.isSniperLevel = isSniperLVL;
         _animator = gameObject.GetComponent<Animator>();
     }
     public void AnimationEnded()

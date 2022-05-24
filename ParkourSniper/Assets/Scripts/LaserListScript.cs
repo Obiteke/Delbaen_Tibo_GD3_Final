@@ -18,6 +18,7 @@ public class LaserListScript : MonoBehaviour
     {
         laserList.Add(new LaserData(Dir, Origin, Time));
         LaserListSaveQueue(Dir, Origin, Time);
+        laserList.Count();
     }
     public void LaserListSaveQueue(Vector3 Dir, Vector3 Origin, float Time)
     {

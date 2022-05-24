@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/parkoursniper_MainMenu.unity
+    guid: 5c839d427fe09a74b8ff47e08658025f
+  - enabled: 1
     path: Assets/Scenes/parkoursniper_Sniper.unity
     guid: 57c50e2dd16e2e94580368b8fb18d957
   - enabled: 1

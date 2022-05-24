@@ -22,7 +22,7 @@ public class LaserRenderer : MonoBehaviour
 
         //MeshCollider collider = _lR.gameObject.AddComponent<MeshCollider>();
 
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (!sMS.isSniperLevel)
         {
             shot = lls.laserList[0];
             lls.laserList.Remove(shot);

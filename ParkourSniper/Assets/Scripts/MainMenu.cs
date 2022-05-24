@@ -3,10 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public string nextSceneName;
+
     #region Methods
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(nextSceneName);
     }
     public void QuitGame()
     {
