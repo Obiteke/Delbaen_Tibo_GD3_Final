@@ -209,60 +209,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: a4c9720a-c811-4fac-8369-159a75668f84
-    m_ActionName: Runner/Move[/XInputControllerWindows/leftStick]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7589165970871444521}
-        m_TargetAssemblyTypeName: SniperScript, GameDesign.parkoursniper
-        m_MethodName: RotationInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 689e1352-ba80-4cd0-a0d9-e4659e5cc002
-    m_ActionName: Runner/Jump[/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 09b5d650-db57-4e1f-9067-05c1ab8fa844
-    m_ActionName: Runner/WallSlide[/XInputControllerWindows/rightTrigger]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7589165970871444521}
-        m_TargetAssemblyTypeName: SniperScript, GameDesign.parkoursniper
-        m_MethodName: ShootInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: a0e86fed-1317-4ff5-b794-7dc82c2273a2
+    m_ActionId: 14f42424-8cdf-436d-9330-6c60460b3e1f
     m_ActionName: Sniper/Move[/XInputControllerWindows/leftStick]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7589165970871444517}
-        m_TargetAssemblyTypeName: CharacterControllerScript, Assembly-CSharp
+      - m_Target: {fileID: 7589165970871444521}
+        m_TargetAssemblyTypeName: SniperScript, GameDesign.parkoursniper
         m_MethodName: RotationInput
         m_Mode: 0
         m_Arguments:
@@ -273,28 +225,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 6258bc81-cefb-475f-9fc9-52f0388ce3b6
+    m_ActionId: 382aafb2-17c8-4b7e-9414-57384ccf92d8
     m_ActionName: Sniper/Aim[/XInputControllerWindows/rightStick]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7589165970871444516}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 7589165970871444521}
+        m_TargetAssemblyTypeName: SniperScript, GameDesign.parkoursniper
+        m_MethodName: ScopeInpute
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 60746f77-a0ed-44c9-b0a5-349b5bb10bf6
+    m_ActionId: 038f9ae7-cc7b-451a-9cd5-35181b2636e3
     m_ActionName: Sniper/Scope[/XInputControllerWindows/leftShoulder]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7589165970871444521}
-        m_TargetAssemblyTypeName: SniperScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: SniperScript, GameDesign.parkoursniper
         m_MethodName: ShootInput
         m_Mode: 0
         m_Arguments:
@@ -305,13 +257,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: e0fe0fa4-90ff-44d3-b78f-837d04e11e39
-    m_ActionName: Sniper/Shoot[/XInputControllerWindows/rightShoulder]
+    m_ActionId: b8a5c67e-9e24-47fc-89df-787b00f0b3a1
+    m_ActionName: Sniper/Fire[/XInputControllerWindows/rightShoulder]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7589165970871444517}
-        m_TargetAssemblyTypeName: CharacterControllerScript, Assembly-CSharp
-        m_MethodName: RotationInput
+      - m_Target: {fileID: 7589165970871444521}
+        m_TargetAssemblyTypeName: SniperScript, GameDesign.parkoursniper
+        m_MethodName: RestartSceneInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -321,8 +273,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 074774c8-f363-4adc-8cca-f64592ee4cad
-    m_ActionName: Runner/Rotation[/XInputControllerWindows/rightStick,/XInputControllerWindows1/rightStick]
+    m_ActionId: 9d1196ad-f10f-4497-be05-74f081814e6c
+    m_ActionName: Sniper/RestartScene[/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7589165970871444521}
+        m_TargetAssemblyTypeName: SniperScript, GameDesign.parkoursniper
+        m_MethodName: NextSceneInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c2e1705c-761d-4398-a75a-6f7b0ec906f3
+    m_ActionName: Sniper/NextScene[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Sniper

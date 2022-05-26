@@ -88,6 +88,21 @@ public class SniperScript : MonoBehaviour
         }
     }
 
+    public void NextSceneInput(InputAction.CallbackContext context)
+    {
+        sMS.StartNextScene();
+    }
+    public void RestartSceneInput(InputAction.CallbackContext context)
+    {
+        sMS.RestartScene();
+    }
+    public void PreviousSceneInput(InputAction.CallbackContext context)
+    {
+        sMS.StartPreviousScene();
+    }
+
+
+
     private void Rotation()
     {
         if (IsRotating)

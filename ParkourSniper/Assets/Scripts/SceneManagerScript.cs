@@ -47,15 +47,12 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void StartNextScene()
     {
-        StartCoroutine(NextScene());
+        SceneManager.LoadScene(_nSNS.nextSceneName);
     }
 
-    private IEnumerator NextScene()
+    public void StartPreviousScene()
     {
-
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(_nSNS.nextSceneName);
-        //return null;
+        SceneManager.LoadScene(_nSNS.previousSceneName);
     }
     public void RestartScene()
     {

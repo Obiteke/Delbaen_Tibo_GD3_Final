@@ -5,4 +5,5 @@ using UnityEngine;
 public class NextSceneNameScript : MonoBehaviour
 {
     public string nextSceneName;
+    public string previousSceneName;
 }
