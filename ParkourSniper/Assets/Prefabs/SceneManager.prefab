@@ -45,11 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a466015bfe1af4a927feee962b7085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemys: []
-  lls: {fileID: 0}
+  lls: {fileID: 9171100257340609785}
   isLongLvl: 0
+  isSniperLevel: 0
   animatorDoorEnd: {fileID: 0}
-  nextSceneName: 
 --- !u!114 &6237279161687603109
 MonoBehaviour:
   m_ObjectHideFlags: 0

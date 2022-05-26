@@ -14,12 +14,17 @@ public class SceneManagerScript : MonoBehaviour
 
     public Animator animatorDoorEnd;
 
-    public string nextSceneName;
+    private NextSceneNameScript _nSNS;
+    //public string nextSceneName;
 
     // Start is called before the first frame update
     void Start()
     {
-        animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();
+        _nSNS = GameObject.FindObjectOfType<NextSceneNameScript>();
+
+        if(GameObject.FindObjectOfType<EndDoorScript>() != null)
+            animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();
+
         lls = FindObjectOfType<LaserListScript>();
         LaserListScript.DontDestroyOnLoad(lls);
     }
@@ -37,6 +42,7 @@ public class SceneManagerScript : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
+        _nSNS = GameObject.FindObjectOfType<NextSceneNameScript>();
         animatorDoorEnd = GameObject.FindObjectOfType<EndDoorScript>().GetComponent<Animator>();
     }
     public void StartNextScene()
@@ -48,8 +54,7 @@ public class SceneManagerScript : MonoBehaviour
     {
 
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(nextSceneName);
-
+        SceneManager.LoadScene(_nSNS.nextSceneName);
         //return null;
     }
     public void RestartScene()

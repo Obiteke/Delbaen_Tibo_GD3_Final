@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 549126876477635964}
   - component: {fileID: 549126876477635965}
   - component: {fileID: 5415454585397263015}
+  - component: {fileID: 7251317048492123573}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -116,6 +117,40 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &7251317048492123573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549126876477635962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &549126877465613277
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cde58e4de7ecd42be97d15fb3ef136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser: {fileID: 0}
+  laser: {fileID: 4623218272971937726, guid: b3886ef6361c5dd4cbb5f6af807469a8, type: 3}
 --- !u!1 &549126877465795863
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +212,7 @@ GameObject:
   - component: {fileID: 549126877465795862}
   - component: {fileID: 549126877465795866}
   - component: {fileID: 549126877465795869}
+  - component: {fileID: 6051941734489382601}
   m_Layer: 7
   m_Name: Runner
   m_TagString: Untagged
@@ -243,15 +279,51 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549126877465795862}
+        m_TargetAssemblyTypeName: CharacterControllerScript, GameDesign.parkoursniper
+        m_MethodName: MovementInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a3d51cb9-f4fb-405c-bd73-4e7cb83fb411
     m_ActionName: Runner/Move[/XInputControllerWindows/leftStick]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549126877465795862}
+        m_TargetAssemblyTypeName: CharacterControllerScript, GameDesign.parkoursniper
+        m_MethodName: JumpingInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 7a9a1a04-5868-49c4-bd3e-ab6ce7fa012d
     m_ActionName: Runner/Jump[/XInputControllerWindows/rightShoulder]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549126877465795869}
+        m_TargetAssemblyTypeName: DashScript, GameDesign.parkoursniper
+        m_MethodName: MovementInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 619c9588-f021-4931-b88b-ed59e9290228
     m_ActionName: Runner/Dash[/XInputControllerWindows/leftShoulder]
   m_NeverAutoSwitchControlSchemes: 0
@@ -309,6 +381,22 @@ MonoBehaviour:
   CCS: {fileID: 0}
   _dashSpeed: 7
   _DashTime: 0.15
+--- !u!54 &6051941734489382601
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549126877465795863}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6254145706519594515
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6705580213155859265}
   m_LocalRotation: {x: 0.17364816, y: -0, z: -0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 4.310793, z: -5.348155}
+  m_LocalPosition: {x: 0, y: 4.310793, z: -5.3481555}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5220444162482010983}

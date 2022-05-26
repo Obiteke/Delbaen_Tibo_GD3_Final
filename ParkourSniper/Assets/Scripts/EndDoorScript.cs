@@ -25,6 +25,7 @@ public class EndDoorScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        sMS.lls.WipeList();
         sMS.StartNextScene();
     }
 }

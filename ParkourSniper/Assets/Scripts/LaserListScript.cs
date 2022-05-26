@@ -32,4 +32,9 @@ public class LaserListScript : MonoBehaviour
             laserList.Add(data);
         }
     }
+    public void WipeList()
+    {
+        laserList.Clear();
+        laserListSave.Clear();
+    }
 }
