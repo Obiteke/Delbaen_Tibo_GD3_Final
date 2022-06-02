@@ -9,10 +9,6 @@ public class LavaScript : MonoBehaviour
     {
         sMS = FindObjectOfType<SceneManagerScript>();
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    sMS.RestartScene();
-    //}
     private void OnTriggerEnter(Collider other)
     {
         sMS.RestartScene();
