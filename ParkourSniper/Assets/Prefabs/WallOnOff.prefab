@@ -110,3 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offMaterial: {fileID: 2100000, guid: a37a33b516aa0244cb72956c1c6826f9, type: 2}
   onMaterial: {fileID: 2100000, guid: e2e5af78eb1153d448d0eb0ef24110f0, type: 2}
+  isWall: 1

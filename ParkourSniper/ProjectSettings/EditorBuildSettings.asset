@@ -22,8 +22,17 @@ EditorBuildSettings:
     guid: 28d03e88d55abfa4a9f80bd831d64fbb
   - enabled: 1
     path: Assets/Scenes/parkoursniper_Sniper_3.unity
-    guid: 57c50e2dd16e2e94580368b8fb18d957
+    guid: efc3c1492dc48c142ac9d4e8f8301fde
   - enabled: 1
     path: Assets/Scenes/parkoursniper_Runner_3.unity
-    guid: d8b83fc0f417a5f458d6c6861acfbf07
+    guid: 90ad1177c683ed34783e8af8d9afe600
+  - enabled: 1
+    path: Assets/Scenes/parkoursniper_Sniper_4.unity
+    guid: 99c235ad202bc604995e191d387e4406
+  - enabled: 1
+    path: Assets/Scenes/parkoursniper_Runner_4.unity
+    guid: ea3585aeb25ea4549b26c1710729693f
+  - enabled: 1
+    path: Assets/Scenes/parkoursniper_End.unity
+    guid: 6dfc9fd908e7d5149ae73bf942ef534e
   m_configObjects: {}

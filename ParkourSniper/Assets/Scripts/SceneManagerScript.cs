@@ -39,6 +39,14 @@ public class SceneManagerScript : MonoBehaviour
             animatorDoorEnd.SetBool("MediumLVL", true);
         }
     }
+    public void LVLModeHard()
+    {
+        isLongLvl = false;
+    }
+    public void LVLModeEasy()
+    {
+        isLongLvl = true;
+    }
 
     private void OnLevelWasLoaded(int level)
     {
@@ -52,12 +60,22 @@ public class SceneManagerScript : MonoBehaviour
 
     public void StartPreviousScene()
     {
+        lls.WipeList();
         SceneManager.LoadScene(_nSNS.previousSceneName);
     }
     public void RestartScene()
     {
-        lls.QueueReset();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (!isSniperLevel)
+        {
+            lls.QueueReset();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            lls.WipeList();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
+
 
 }

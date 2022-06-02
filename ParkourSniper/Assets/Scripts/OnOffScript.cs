@@ -7,6 +7,8 @@ public class OnOffScript : MonoBehaviour
     public Material offMaterial;
     public Material onMaterial;
 
+    public bool isWall;
+
     void Start()
     {
         gameObject.GetComponent<MeshRenderer>().material = offMaterial;
@@ -14,7 +16,7 @@ public class OnOffScript : MonoBehaviour
     public void OnMaterial()
     {
         gameObject.GetComponent<MeshRenderer>().material = onMaterial;
-        if (GetComponent<Collider>().isTrigger == true)
+        if (!isWall)
             GetComponent<Collider>().isTrigger = false;
         else
         {
