@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3578651540
+CRC: 34057673
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 76dd85b3ba653b31eecd6176f48ca063
+    Hash: 22bfca1ad4e44295d2d931d90687ca24
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 414c232a0d57b664e869bac2063d795a
+    Hash: 1a650b306fe0722642a7d5fa290440c7
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -81,6 +81,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: efcfb91ff0d790348b485e9e23dcf560, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1df2f967b0bbcbf45917707fd53bb701, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 228bd0864a046e747b70e28b1f9ed439, type: 3}
 - Class: 114
@@ -163,6 +165,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/Scenes/parkoursniper_End.unity
 - Assets/Scenes/parkoursniper_Runner_1.unity
 - Assets/Scenes/parkoursniper_Sniper_4.unity
 - Assets/Scenes/parkoursniper_Sniper_3.unity

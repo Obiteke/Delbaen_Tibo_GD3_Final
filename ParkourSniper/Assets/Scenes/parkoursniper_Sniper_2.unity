@@ -1303,6 +1303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1727036052557384005, guid: 602dc1ac386d8954ea6c63a2f4eedfe6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2366455856028014411, guid: 602dc1ac386d8954ea6c63a2f4eedfe6, type: 3}
       propertyPath: m_Name
       value: Cave
